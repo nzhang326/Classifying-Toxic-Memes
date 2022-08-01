@@ -46,6 +46,8 @@ Feature reduction and clustering was explored with PCA, KMeans, DBSCAN, and GMM.
 
 ## Results
 
+# unsupervised
+
 We take features obtained from early and later stage layers from ResNET-50 and early, middle and later stage layers from BERT. Using GMM for clustering, we conclude that the features from the 11th layer of the BERT produce the best results individually and results from the fully-connected layer(FC) of ResNET-50 give the best results without data fusion. The results are compiled in Table 1.
 
 
@@ -204,6 +206,16 @@ Finally, we tried concatenating features obtained from various layers of BERT. F
 
 </table>
 </center>
+
+Finally, to visualize a meaningful representation of the training dataset, we concatenated pairwise image and text layers from ResNet50 and BERT, respectively.  tSNE was implemented to reduce the 1768 features pertaining to the 8500 training samples to a 2-dimensional embedding (Fig. 2).  Subsequently, KMeans clustering (n = 2) was performed on the embedding to attempt partitioning of the samples into Not Hateful (0) or Hateful (1) categories.  Fig. 2 illustrates various examples of feature concatenation from early or late BERT and ResNet50 features.  Upon closer examination and combined with the results above, we see that unsupervised learning has performed poorly. This is expected as we have not optimized any parameters for the Hateful Memes dataset. This forms our motivation to do supervised learning with the fused features.
+
+
+fig2
+
+# supervised learning
+
+
+
 
 ## Conclusions
 
