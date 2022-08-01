@@ -46,7 +46,7 @@ Feature reduction and clustering was explored with PCA, KMeans, DBSCAN, and GMM.
 
 ## Results
 
-# unsupervised
+### unsupervised
 
 We take features obtained from early and later stage layers from ResNET-50 and early, middle and later stage layers from BERT. Using GMM for clustering, we conclude that the features from the 11th layer of the BERT produce the best results individually and results from the fully-connected layer(FC) of ResNET-50 give the best results without data fusion. The results are compiled in Table 1.
 
@@ -212,7 +212,7 @@ Finally, to visualize a meaningful representation of the training dataset, we co
 
 fig2
 
-# supervised learning
+### supervised learning
 
 
 
