@@ -225,7 +225,7 @@ Next, we concatenated features obtained from various layers of BERT. For example
 Finally, to visualize a meaningful representation of the training dataset, we concatenated pairwise image and text layers from ResNet50 and BERT, respectively.  tSNE was implemented to reduce the 1768 features pertaining to the 8500 training samples to a 2-dimensional embedding (Fig. 3).  Subsequently, KMeans clustering (n = 2) was performed on the embedding to attempt partitioning of the samples into Not Hateful (0) or Hateful (1) categories.  Fig. 3 illustrates various examples of feature concatenation from early or late BERT and ResNet50 features.  Upon closer examination and combined with the results above, we see that unsupervised learning has performed poorly. This is expected as we have not optimized any parameters for the Hateful Memes dataset. This forms our motivation to do supervised learning with the fused features.
 
 <p align="center">
-    <img align="center" src= ![tSNE_KMeans](https://user-images.githubusercontent.com/105808919/182268854-97888c90-82f8-4eb5-b43d-cd8c8f43ff99.png)
+    <img align="center" src= 'unsupv.png')
  />
 </p>
 <p align="center">
